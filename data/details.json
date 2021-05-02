@@ -1,0 +1,36 @@
+[   {
+        "title":"Simple Calculator",
+        "description":"A simple Calculator using html,css and javascript. It also has an option of changing theme.simple calculations like addition, subtraction,... can be performed.",
+        "path":"./projects/simple-calculator/index.html"
+    },
+    {
+        "title": "Stopwatch",
+        "description": "Stopwatch made using HTML, CSS, and javascript.It has the following functionalities like record laps, pause watchreset watch.",
+        "path": "./projects/stopwatch/index.html"
+    },
+    {
+        "title": "TIC-TAC-TOE",
+        "description": "Tic tac toe is a multiplayer game and the players of this game have to position their marks(sign) so that they can construct a continuous line of three cells or box vertically, horizontally, or diagonally. An opponent can stop a win by blocking the end of the opponent's line.This game is made using HTML,CSS and JavaScript.",
+        "path": "./projects/tic-tac-toe/index.html"
+    },
+    {
+        "title":"TODO List",
+        "description":"A to-do list can help you reschedule and organize your time. For example, you encounter a canceled meeting, the first thing you might ask your own self is what to do to fill in the sudden extra time. With a to-do list, you can easily identify whether what productive thing you can do to make up for your canceled meeting.",
+        "path":"./projects/to-do-list/index.html"
+    },
+    {
+        "title":"Snake Game",
+        "description":"Snake is a classic video game from the late 70s. The basic goal is to navigate a snake and eat as many apples as possible without touching the walls or the snake’s body.",
+        "path":"./projects/Snake-Game/index.html"
+    },
+    {
+        "title":"Museum of candy",
+        "description":"Candy store web page using Bootstrap. Built this during udemy's web development boot camp.",
+        "path":"./projects/museum-of-candy/index.html"
+    },
+    {
+        "title":"Memory Game",
+        "description":"The memory game is a basic matching game to test the player's memory. In a deck of paired cards, the player needs to match each pair to win the game.",
+        "path":"./projects/memory-game/index.html"
+    }
+]
