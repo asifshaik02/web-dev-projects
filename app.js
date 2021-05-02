@@ -1,5 +1,5 @@
 //load html with contents in "details.json"
-fetch("data/details.json")
+fetch("https://asifshaik02.github.io/web-dev-projects/data/details.json")
     .then(response => response.json())
     .then(data =>{
         l = [];
