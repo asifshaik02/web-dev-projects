@@ -21,7 +21,7 @@
     {
         "title":"Snake Game",
         "description":"Snake is a classic video game from the late 70s. The basic goal is to navigate a snake and eat as many apples as possible without touching the walls or the snake’s body.",
-        "path":"./projects/Snake-Game/index.html"
+        "path":"./projects/snake-game/index.html"
     },
     {
         "title":"Museum of candy",
