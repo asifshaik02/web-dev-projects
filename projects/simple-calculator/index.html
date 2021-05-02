@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <div class="center">
+        <input type="checkbox" id="checkbox">
+    </div>
+    <div id="calc">
+        <div class="main">
+            <div class="text">
+                <textarea name="display" id="text" rows="1"></textarea>
+
+                <i class='fas fa-backspace' onclick="clearSpace()"></i>
+            </div>
+            <hr>
+            <div class="btn-group">
+                <button class="btn" style="width: 90px;border-radius: 20px; background-color: orange;"
+                    onclick="clearScreen()">c</button>
+
+                <button class="btn" style="padding-left:12px;padding-right: 12px;"
+                    onclick="addTextToArea('%')">%</button>
+                <button class="btn" onclick="addTextToArea('/')">&divide;</button>
+
+                <button class="btn" onclick="addTextToArea('7')">7</button>
+                <button class="btn" onclick="addTextToArea('8')">8</button>
+                <button class="btn" onclick="addTextToArea('9')">9</button>
+                <button class="btn" onclick="addTextToArea('x')">x</button>
+
+                <button class="btn" onclick="addTextToArea('4')">4</button>
+                <button class="btn" onclick="addTextToArea('5')">5</button>
+                <button class="btn" onclick="addTextToArea('6')">6</button>
+                <button class="btn" onclick="addTextToArea('-')">-</button>
+
+                <button class="btn" onclick="addTextToArea('1')">1</button>
+                <button class="btn" onclick="addTextToArea('2')">2</button>
+                <button class="btn" onclick="addTextToArea('3')">3</button>
+                <button class="btn" onclick="addTextToArea('+')">+</button>
+
+                <button class="btn" onclick="addTextToArea('.')">.</button>
+                <button class="btn" onclick="addTextToArea('0')">0</button>
+
+                <button class="btn" style="width: 90px;border-radius: 20px; background-color: rgba(13, 161, 13, 0.726);"
+                    onclick="getVariables()">=</button>
+
+
+            </div>
+        </div>
+    </div>
+    <button onclick="showHistory()" id="historyDisplay"><i class='fas fa-history' style='font-size:24px'></i></button>
+    <div id="history">
+        <h5>History</h5>
+        <p id="his"></p>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>
