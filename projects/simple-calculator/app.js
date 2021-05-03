@@ -1,83 +1,52 @@
-
-const checkbox = document.getElementById('checkbox');
-checkbox.addEventListener('change', () => {
-    document.body.classList.toggle('dark');
-});
-
-
-function eval(a, b, c) {
-    var result;
-    switch (c) {
-        case '+':
-            result = parseFloat(a + b);
-            break;
-        case '-':
-            result = parseFloat(a - b);
-            break;
-        case 'x':
-            result = parseFloat(a * b);
-            break;
-        case '/':
-            result = parseFloat(a / b);
-            break;
-        case '%':
-            result = parseFloat((a / 100) * b);
-        default:
-            break;
+//Change Theme
+let check = 0;
+function changeTheme() {
+    if(!check){
+        document.documentElement.style.cssText = `--bg-color: #333a4d; --display-color:#ed3f49; --button-color:#485371`;
+        check = true;
     }
-    clearScreen();
-    addTextToArea(result);
-    history(a, b, c, result);
+    else{
+        document.documentElement.style.cssText = `--bg-color: #ed3f49; --display-color:#333a4d; --button-color:#f13f4b;`;
+        check = false;
+    }
 }
 
-function getVariables() {
-    var value = text.value;
-    var a = '', b = '', i = 0;
-    if (value[0] == '-') {
-        a += value[0];
-        i++;
-    }
-    while (value[i] != '+' && value[i] != '-' && value[i] != '/' && value[i] != 'x' && value[i] != '%') {
-        a += value[i];
-        i++;
-    }
+//logic
 
-    var c = value[i];
-
-    while (i + 1 < value.length) {
-        b += value[i + 1];
-        i++;
-    }
-    a = parseFloat(a);
-    b = parseFloat(b);
-    eval(a, b, c);
-}
-
-
-function addTextToArea(c) {
-    text.value += c;
-}
-
-function clearScreen() {
-    text.value = '';
-}
+// select all the buttons
+const buttons = document.querySelectorAll('button');
+const display = document.querySelector('#display');
+const result = document.querySelector('#res');
 
 function clearSpace() {
-    text.value = text.value.slice(0, -1);
+    display.innerHTML = display.innerHTML.slice(0,-1);
 }
-function history(a, b, c, res) {
-    var p = a + c + b + '=' + res;
-    console.log(p);
-    var history = document.getElementById("his");
-    history.innerHTML += ' ' + p + '<br>'
 
-}
-function showHistory() {
-    var h = document.getElementById("history");
-    if (h.style.display === 'inline-block') {
-        h.style.display = 'none';
+// add eventListener to each button
+buttons.forEach(function (button) {
+    button.addEventListener('click', calculate);
+});
+
+function calculate(event) {
+    const buttonValue = event.target.value;
+    if(buttonValue === "="){
+        if(display.innerHTML !== ''){
+            result.innerHTML = eval(display.innerHTML);
+        }
     }
-    else {
-        h.style.display = 'inline-block';
+    else if(buttonValue === 'AC'){
+        display.innerHTML = '';
+        result.innerHTML = '0';
+    }
+    else if(buttonValue === '+/-'){
+        if(display.innerHTML === ''){
+            display.innerHTML = '-';
+        }
+        else if (display.innerHTML === '-'){
+            display.innerHTML = '';
+        }
+    }
+    else{
+        display.innerHTML += buttonValue;
     }
 }

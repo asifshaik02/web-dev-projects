@@ -1,67 +1,52 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
-    <h1>Calculator</h1>
-    <div class="center">
-        <input type="checkbox" id="checkbox">
-    </div>
-    <div id="calc">
-        <div class="main">
-            <div class="text">
-                <textarea name="display" id="text" rows="1"></textarea>
-
+    <header>
+        <h1>Calculator</h1>
+        <button onClick="changeTheme()"></button>
+    </header>
+    <section class="container">
+        <div class="display-box">
+            <div class="row-1">
+                <p id="display"></p>
                 <i class='fas fa-backspace' onclick="clearSpace()"></i>
             </div>
-            <hr>
-            <div class="btn-group">
-                <button class="btn" style="width: 90px;border-radius: 20px; background-color: orange;"
-                    onclick="clearScreen()">c</button>
-
-                <button class="btn" style="padding-left:12px;padding-right: 12px;"
-                    onclick="addTextToArea('%')">%</button>
-                <button class="btn" onclick="addTextToArea('/')">&divide;</button>
-
-                <button class="btn" onclick="addTextToArea('7')">7</button>
-                <button class="btn" onclick="addTextToArea('8')">8</button>
-                <button class="btn" onclick="addTextToArea('9')">9</button>
-                <button class="btn" onclick="addTextToArea('x')">x</button>
-
-                <button class="btn" onclick="addTextToArea('4')">4</button>
-                <button class="btn" onclick="addTextToArea('5')">5</button>
-                <button class="btn" onclick="addTextToArea('6')">6</button>
-                <button class="btn" onclick="addTextToArea('-')">-</button>
-
-                <button class="btn" onclick="addTextToArea('1')">1</button>
-                <button class="btn" onclick="addTextToArea('2')">2</button>
-                <button class="btn" onclick="addTextToArea('3')">3</button>
-                <button class="btn" onclick="addTextToArea('+')">+</button>
-
-                <button class="btn" onclick="addTextToArea('.')">.</button>
-                <button class="btn" onclick="addTextToArea('0')">0</button>
-
-                <button class="btn" style="width: 90px;border-radius: 20px; background-color: rgba(13, 161, 13, 0.726);"
-                    onclick="getVariables()">=</button>
-
-
+            <div class="row-2">
+                <div id="aligin">=</div>
+                <div id="res">0</div>
             </div>
         </div>
-    </div>
-    <button onclick="showHistory()" id="historyDisplay"><i class='fas fa-history' style='font-size:24px'></i></button>
-    <div id="history">
-        <h5>History</h5>
-        <p id="his"></p>
-    </div>
+        <div class="keys">
+            <button value="AC" class="cell operator">AC</button>
+            <button value="+/-" class="cell operator">+/-</button>
+            <button value="%" class="cell operator">%</button>
+            <button value="*" class="cell operator">x</button>
+            <button value="7" class="cell">7</button>
+            <button value="8" class="cell">8</button>
+            <button value="9" class="cell">9</button>
+            <button value="/" class="cell operator">/</button>
+            <button value="4" class="cell">4</button>
+            <button value="5" class="cell">5</button>
+            <button value="6" class="cell">6</button>
+            <button value="-" class="cell operator">-</button>
+            <button value="1" class="cell">1</button>
+            <button value="2" class="cell">2</button>
+            <button value="3" class="cell">3</button>
+            <button value="+" class="cell operator">+</button>
+            <button value="0" class="cell spec">0</button>
+            <button value="." class="cell">.</button>
+            <button value="=" class="cell end">=</button>
+        </div>
+    </section>
+    <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
-
 </html>
