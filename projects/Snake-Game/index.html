@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>Snake Game</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body>
-    <h1>Snake Game</h1>
-    <canvas id="game" width="400" height="400" style="background-color: grey;"></canvas>
-    <div class="score">score:<span id="score">0</span></div>
-    <div class="Hscore">High Score:<span id="Hscore"></span></div>
-</body>
-<script type="text/javascript" src="app.js"></script>
-
+    <head>
+        <title>Snake Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/all.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Snake Game</h1>
+        <canvas id="game" width=400 height=400></canvas>
+        <div class="container">
+            <div class="score">score: <span id="score">0</span></div>
+            <div class="Hscore">High Score: <span id="Hscore">0</span></div>
+        </div>
+        <section class="directions">
+            <button class="btn" onclick="changeDirection('Left')"><i class="fa fa-arrow-left"></i></button>
+            <div class="row">
+                <button class="btn" onclick="changeDirection('Up')"><i class="fa fa-arrow-up"></i></button>
+                <button class="btn" onclick="changeDirection('Down')"><i class="fa fa-arrow-down"></i></button>
+            </div>
+            <button class="btn" onclick="changeDirection('Right')"><i class="fa fa-arrow-right"></i></button>
+        </section>
+    </body>
+    <script type="text/javascript" src="app.js"></script>
 </html>

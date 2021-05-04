@@ -1,29 +1,69 @@
-* {
-    background-color: rgb(62, 202, 57);
+body{
+    background:#ed3f49;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-h1 {
-    color: black;
-    font-weight: bold;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+canvas{
+    background-color:#333a4d;
+    border: 1em solid #faf8f842;
 }
-#game {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
 }
-.score {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+.score{
+    font-size: 2em;
+    font-weight: 700;
 }
+
+.score #score{
+    font-weight: 300;
+}
+
 .Hscore{
-    position: absolute;
-    top: 92%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 2em;
+    font-weight: 700;
+    padding-left: 3.5em;
+}
+
+.Hscore #Hscore{
+    font-weight: 300;
+}
+.directions{
+    display: none;
+    margin: 1em 0 0 0;
+}
+.btn{
+    margin: 0.2em;
+    background-color: #485371;
+    border: none;
+    color:#fff;
+    padding: 1.2em;
+}
+
+.row{
+    display:flex;
+    flex-direction: column;
+}
+
+.row .btn{
+    padding: 0.2em 1.2em;
+}
+
+@media(max-width: 767px){
+    canvas{
+        border: 0.5em solid #faf8f842;
+    }
+    .container{
+        margin-top: 2em;
+    }
+    .directions{
+        display: flex;
+    }
 }
