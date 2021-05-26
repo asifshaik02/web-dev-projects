@@ -31,6 +31,6 @@
     {
         "title":"Movie search",
         "description":"Using omdb's api created an app to serach for movie details using the movie's title.",
-        "path":"./projects/movie-Search/index.html"
+        "path":"./projects/movie-search/index.html"
     }
 ]
