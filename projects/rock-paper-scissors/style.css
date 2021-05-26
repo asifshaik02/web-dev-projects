@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    background: #fff;
+    font-family: 'Nunito', sans-serif;
+}
+header{
+    margin-bottom:1em;
+}
+.game{
+    background:#2a9d8f;
+    padding: 5.5em;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+
+.icons{
+    padding:2em;
+}
+
+.icons button{
+    font-size:4em;
+    /* color:yellow; */
+}
+
+button{
+    background-color:transparent;
+    outline: none;
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.score{
+    display:flex;
+    /* justify-content:space-evenly; */
+}
+
+.score p{
+    margin: 0 1em;
+}
