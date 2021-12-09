@@ -2,7 +2,7 @@ function search(ele) {
     if (event.key === 'Enter') {
         query = ele.value;
         apikey = "591e06fe"
-        url = `http://www.omdbapi.com/?t=${encodeURIComponent(query)}&apikey=${apikey}&plot=full`
+        url = `https://www.omdbapi.com/?t=${encodeURIComponent(query)}&apikey=${apikey}&plot=full`
 
         cont = document.getElementById('content')
 
